@@ -27,6 +27,7 @@ main .mainCard {
     border-radius: 10px;
     background-color: var(--dark-blue);
     margin-right: 25px;
+    box-shadow: 0 0 15px 8px hsl(225, 44%, 7%);
 }
 
 main .mainCard .top {
@@ -63,10 +64,6 @@ main .mainCard .button-container .button {
     border: none;
 }
 
-main .mainCard .button-container .button:focus {
-    color: white;
-}
-
 main .mainCard img {
     width: 50px;
     height: auto;
@@ -87,6 +84,15 @@ main .container .card {
     border-radius: 10px;
     color: white;
     font-weight: 300;
+    box-shadow: 0 0 15px 8px hsl(225, 44%, 7%);
+}
+
+main .container .card .info{
+    transition: filter 0.5s ease-out;
+}
+
+main .container .card .info:active{
+    filter: brightness(150%);
 }
 
 main .container .card .info {
@@ -104,7 +110,24 @@ main .container .card .info .top {
     width: 80%;
     margin-left: 10%;
     padding-top: 20px;
+    padding-bottom: 20px;
     font-weight: 400;
+}
+
+main .container .card .info .hours{
+    display: flex;
+    flex-direction: column;
+}
+
+main .container .card .info .hours a{
+    font-weight: 300;
+    font-size: 44px;
+    padding-bottom: 12px;
+}
+
+main .container .card .info .hours label{
+    font-size: 12px;
+    color: var(--pale-blue);
 }
 
 main .container .card .info .top button {
