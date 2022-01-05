@@ -63,7 +63,7 @@ main .mainCard .button-container .button {
     border: none;
 }
 
-main .mainCard .button-container .button:focus {
+main .mainCard .button-container .button:hover {
     color: white;
 }
 
@@ -89,12 +89,25 @@ main .container .card {
     font-weight: 300;
 }
 
+main .container .card .icon {
+    position: absolute;
+    padding-left: 140px;
+    height: auto;
+    width: 45px;
+}
+
 main .container .card .info {
+    position: relative;
     width: 100%;
     height: 160px;
     border-radius: 9px;
     background-color: var(--dark-blue);
     margin-top: 30px;
+    transition: filter 0.5s ease-out;
+}
+
+main .container .card .info:active {
+    filter: brightness(150%);
 }
 
 main .container .card .info .top {
@@ -112,11 +125,26 @@ main .container .card .info .top button {
     border: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 main .container .card .info .hours {
+    display: flex;
+    flex-direction: column;
     width: 80%;
     margin-left: 10%;
+    margin-top: 15px;
+}
+
+main .container .card .info .hours a {
+    font-weight: 300;
+    font-size: 50px;
+    cursor: default;
+}
+
+main .container .card .info .hours label {
+    font-size: 12px;
+    cursor: default;
 }
 
 .attribution {
